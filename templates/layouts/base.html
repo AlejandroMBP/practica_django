@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}{% endblock title %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'stile.css' %}">
+        {% block style %}{% endblock style %}
+    </head>
+    <body>
+        {% include "layouts/partials/menu.html" %}
+`       <main>
+        {% block content %}        
+        {% endblock content %}
+
+          </main>`
+        
+        {% include "layouts/partials/footers.html" %}
+        {% block scripts %}{% endblock %} 
+    </body>
+</html>
